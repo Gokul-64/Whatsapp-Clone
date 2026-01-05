@@ -1,0 +1,3 @@
+var channels_view = {
+    
+}

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#whatsapp-dashboard{
+    display: flex;
+    flex-direction: row;
+
+}
+#whatsapp-dashboard > #view{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+#whatsapp-dashboard > #view >#navbar-left{
+    display: flex;
+    flex-direction: column;
+    background-color: #1D1F1F;
+    width: 4em;
+}
+#whatsapp-dashboard > #view >#chat{
+    width: 43%;
+    max-width: 39.375em;
+    border-right: 1px solid #7d7d7d2e;
+    background: #161717;
+}
+#whatsapp-dashboard > #view >#content{
+    width: 100%;
+}

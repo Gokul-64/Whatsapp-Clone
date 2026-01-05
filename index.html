@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Whatsapp</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="router_dashboard/router_dashboard_view.js"></script>
+    <script src="router_dashboard/router_dashboard_controller.js"></script>
+    <script src="primary_navbar/primary_navbar_view.js"></script>
+    <script src="primary_navbar/primary_navbar_controller.js"></script>
+
+    <script src="chat_contacts/chat_contacts_view.js"></script>
+    <script src="chat_contacts/chat_contacts_controller.js"></script>
+
+    <script src="chat_content/chat_content_view.js"></script>
+    <script src="chat_content/chat_content_controller.js"></script>
+
+    <script src="status/status_view.js"></script>
+    <script src="status/status_controller.js"></script>
+
+    <script src="channels/channels_view.js"></script>
+    <script src="channels/channels_controller.js"></script>
+
+    <script src="community/community_view.js"></script>
+    <script src="community/community_controller.js"></script>
+
+    <script src="settings/settings_view.js"></script>
+    <script src="settings/settings_controller.js"></script>
+
+    <script src="profile/profile_view.js"></script>
+    <script src="profile/profile_controller.js"></script>
+
+    <link rel="stylesheet" href="router_dashboard/router_dashboard_view.css">
+    <link rel="stylesheet" href="primary_navbar/primary_navbar_view.css">
+    <link rel="stylesheet" href="chat_contacts/chat_contacts_view.css">
+    <link rel="stylesheet" href="chat_content/chat_content_view.css">
+    <link rel="stylesheet" href="status/status_view.css">
+    <link rel="stylesheet" href="community/community_view.css">
+    <link rel="stylesheet" href="channels/channels_view.css">
+    <link rel="stylesheet" href="settings/settings_view.css">
+    <link rel="stylesheet" href="profile/profile_view.css">
+
+
+    <script src="utility/router.js"></script>
+
+</head>
+<body>
+    <div id="whatsapp_home"></div>
+    <script>
+        const router = VueRouter.createRouter({
+            history: VueRouter.createWebHashHistory(), 
+            routes: whatsappRoutes,
+        });
+
+        const app=Vue.createApp({
+            template:`
+                <router-dashboard-controller></router-dashboard-controller>
+            `
+        });
+
+
+        app.component('primary-navbar-view',primary_navbar_view);
+        app.component('primary-navbar-controller',primary_navbar_controller);
+
+        app.component('chat-contacts-view',chat_contacts_view);
+        app.component('chat-contacts-controller',chat_contacts_controller);
+
+        app.component('chat-content-view',chat_content_view);
+        app.component('chat-content-controller',chat_content_controller);
+        app.component('router-dashboard-view',router_dashboard_view);
+
+        app.component('router-dashboard-controller',router_dashboard_controller);
+        app.use(router);
+        app.mount("#whatsapp_home");
+    </script>
+</body>
+</html>
