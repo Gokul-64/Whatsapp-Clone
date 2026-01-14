@@ -30,6 +30,12 @@
     <script src="profile/profile_view.js"></script>
     <script src="profile/profile_controller.js"></script>
 
+    <script src="component/dropdown/dropdown_view.js"></script>
+    <script src="component/dropdown/dropdown_controller.js"></script>
+
+    <script src="component/message/message_view.js"></script>
+    <script src="component/message/message_controller.js"></script>
+
     <link rel="stylesheet" href="router_dashboard/router_dashboard_view.css">
     <link rel="stylesheet" href="primary_navbar/primary_navbar_view.css">
     <link rel="stylesheet" href="chat_contacts/chat_contacts_view.css">
@@ -39,6 +45,8 @@
     <link rel="stylesheet" href="channels/channels_view.css">
     <link rel="stylesheet" href="settings/settings_view.css">
     <link rel="stylesheet" href="profile/profile_view.css">
+    <link rel="stylesheet" href="component/dropdown/dropdown_view.css">
+    <link rel="stylesheet" href="component/message/message_view.css">
 
 
     <script src="utility/router.js"></script>
@@ -67,9 +75,16 @@
 
         app.component('chat-content-view',chat_content_view);
         app.component('chat-content-controller',chat_content_controller);
+        
         app.component('router-dashboard-view',router_dashboard_view);
-
         app.component('router-dashboard-controller',router_dashboard_controller);
+
+        app.component('dropdown-view',dropdown_view);
+        app.component('dropdown-controller',dropdown_controller);
+
+        app.component('message-view',message_view);
+        app.component('message-controller',message_controller);
+
         app.use(router);
         app.mount("#whatsapp_home");
     </script>

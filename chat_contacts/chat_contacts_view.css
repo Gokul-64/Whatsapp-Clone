@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    position: relative;
 }
 .contacts_root >#content > #searchField{
     padding: 0.6em 0.7em;
@@ -87,6 +88,12 @@
     gap: 0.7em;
     padding-left: 2em;
 }
+#dropdown{
+    position: absolute;
+    top: 3.5em;
+    left: 34.5em;
+    z-index: 10;
+}
 .filter-pill {
     display: flex;
     min-width: 3em;
@@ -104,4 +111,9 @@
 .filter-pill.active {
     border:1px solid #28493e;
     background: #103529;
+}
+#contactsList{
+    width: 100%;
+    height: calc(100vh - 8.5em);
+    overflow-y: auto;
 }

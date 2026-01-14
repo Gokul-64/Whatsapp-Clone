@@ -11,8 +11,11 @@ var chat_contacts_view = {
                             </router-link>
                         </div>
                         <div id="more">
-                            <div id="icon" v-html="iconList.more"></div>
+                            <div id="icon" v-html="iconList.more" @click="opendrop"></div>
                         </div>
+                    </div>
+                    <div id="dropdown" v-if="dropdownOpen">
+                        <dropdown-controller v-if="dropdownOpen"></dropdown-controller>
                     </div>
                 </div>
             </div>
@@ -28,13 +31,18 @@ var chat_contacts_view = {
                     <div class='filter-pill' :class="{ active: activeFilter === 'unread'}" @click="activeFilter = 'unread'">Unread</div>
                     <div class='filter-pill' :class="{ active: activeFilter === 'groups'}" @click="activeFilter = 'groups'">Groups</div>
                 </div>
+
+                <div id="contactsList">
+                    <message-controller></message-controller>
+                </div>
             </div>
         </div>
     `,
     data() {
         return {
             searchValue: '',
-            activeFilter: 'all' 
+            activeFilter: 'all',
+            dropdownOpen: false
         }
     },
     props: {
@@ -43,6 +51,9 @@ var chat_contacts_view = {
     methods: {
         clearsearchValue() {
             this.searchValue = '';
+        },
+        opendrop() {
+            this.dropdownOpen = !this.dropdownOpen;
         }
     }
 }

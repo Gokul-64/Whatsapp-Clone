@@ -1,0 +1,44 @@
+#dropdown_menu > #content{
+    display: flex;
+    flex-direction: column;
+    background-color: #161717;
+    border-radius: 1.7em;
+    border: 0.001em solid #80808036;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.6em;
+}
+#dropdown_menu >  #content > #top_section >.dropdown_item,
+#dropdown_menu >  #content > #bottom_section >.dropdown_item2{
+    padding: 0.6em 0.2em 0.6em 0.4em;
+    cursor: pointer;
+    min-width: 10em;
+    transition: 0.15s ease-in-out;
+}
+#bottom_section{
+    border-top:1px solid #80808036;
+}
+#dropdown_menu >  #content > #top_section >.dropdown_item > #icon_group,
+#dropdown_menu >  #content > #bottom_section >.dropdown_item2 > #icon_group{
+    display: flex;
+    font-size: 0.8vw;
+    color: #fffffffc;
+    font-family: Arial;
+    gap: 0.5em;
+    justify-content: flex-start;
+    transition: 0.15s ease-in-out;
+
+}
+#dropdown_menu >  #content > #top_section >.dropdown_item:hover,
+#dropdown_menu >  #content > #bottom_section >.dropdown_item2:hover{
+    background-color: #ffffff1a;
+    border-radius: 0.5em;
+}
+
+#dropdown_menu >  #content> #bottom_section > .dropdown_item2:last-child:hover{
+    background-color: #b6424236;
+    border-radius: 0.5em;
+}
+
+#dropdown_menu >  #content> #bottom_section > .dropdown_item2:last-child:hover > #icon_group{
+    color: #e4565691;
+}
